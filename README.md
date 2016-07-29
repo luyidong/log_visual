@@ -1,7 +1,7 @@
 #基于Python，前端基于Echarts,按照不同的维度展示数据
 
 ###日志可视化三步走
-####1.按需展示数据。
+####1.按需展示数据
 比如统计url,ip,status分别访问多少次，把前几名统计出来:
 
 简单的切割了几百行的日志, 通过readFile.py处理结果：
@@ -43,7 +43,8 @@ select status,sum(value) from fable_log group by status
 6 rows in set (0.02 sec)
 ```
 
-信息可视化展示
+信息可视化展示:
+
 ![](https://github.com/luyidong/log_visual/blob/master/screen/http-status.png)
 
 简单的三步，完成了汇总数据的展示，让数据更加一目了然,通过Web图形展示比发邮件读文字强多了;
