@@ -1,6 +1,6 @@
-##日志可视化三步走
+## 日志可视化三步走
 基于Python，前端基于Echarts,按照不同的维度展示数据
-####1.按需展示数据
+#### 1.按需展示数据
 比如统计url,ip,status分别访问多少次，把前几名统计出来:
 简单的切割了几百行的日志, 通过readFile.py处理结果：
 ```base
@@ -16,13 +16,13 @@
 ('113.95.36.30', '/favicon.ico', '404', 2)
 ```
 
-####2.通过浏览器实现简单的展示
+#### 2.通过浏览器实现简单的展示
 生成list，通过saver.py把拼接的sql插入Mysql数据库 
 运行flask_web.py，当用户请求指定的Url，把查询Mysql的结果通过Web展示:
 
 ![](https://github.com/luyidong/log_visual/blob/master/screen/http-url.jpg)
 
-####3.为了更好的展示页面，可以借用第三方库Highcharts和Echarts:
+#### 3.为了更好的展示页面，可以借用第三方库Highcharts和Echarts:
 
 拼接Sql
 ```base
@@ -40,7 +40,7 @@ select status,sum(value) from fable_log group by status
 6 rows in set (0.02 sec)
 ```
 
-信息可视化展示:
+#### 信息可视化展示:
 
 ![](https://github.com/luyidong/log_visual/blob/master/screen/http-status.png)
 
